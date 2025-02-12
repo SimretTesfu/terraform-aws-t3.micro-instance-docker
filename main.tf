@@ -1,11 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.86.0"
-    }
-  }
-}
 
 # Data source to find the latest Ubuntu AMI
 data "aws_ami" "ubuntu" {
