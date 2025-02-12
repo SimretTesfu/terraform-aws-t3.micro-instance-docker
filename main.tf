@@ -73,7 +73,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
   tags = {
-    Name = "var.instance_tags"
+    Name = var.instance_tags
 
   }
   key_name= var.key_name
