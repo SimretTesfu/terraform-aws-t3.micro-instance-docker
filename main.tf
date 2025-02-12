@@ -81,5 +81,5 @@ resource "aws_instance" "web" {
   # Ensure the EC2 instance is created after the security group is created
 
   
-  user_data = "${file("userdata.sh")}"
+  user_data = templatefile("${abspath(path.module)}/userdata.sh", {myserver = var.instance_tags})
 }
